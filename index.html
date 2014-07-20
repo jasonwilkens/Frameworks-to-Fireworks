@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/theme/default.css" id="theme">
     <link rel="stylesheet" href="lib/css/zenburn.css">
     <link rel="stylesheet/less" type="text/css" href="css/theme.less" />
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <script src="js/less.js" type="text/javascript"></script>
 
     <!-- If the query includes 'print-pdf', use the PDF print sheet -->
@@ -37,50 +38,71 @@
           <h3 class="inverse">Jason Wilkens</h3>
           <aside class="notes">
             <ul>
-              <li>Great talks before</li>
               <li>Thanks for coming</li>              
-              <li>DITB = HTML/CSS</li>
-              <li>a year ago, very little experience</li>
-              <li>share advantages, challenges, should give you confidence</li>
-              <li>It's great, want to convince you</li>              
+              <li>Thanks to Dave Hogue for inviting me and Atlassian</li>
             </ul>
           </aside>
         </section>
 
 		<section>
-          <img src="img/snob-lifecycle.jpg">          
-          <h2>"designing in the browser"</h2>
+          <h1><i class="fa fa-pencil"></i></h1>
+          <h2>Workflow</h2>
+          <!-- Show icon of pencil > image > browser and pencil > browser -->
           <aside class="notes">
             <ul>
-              <li>this is twitter topic lifecycle, explain</li>
-              <li>popular trend, came from responsive</li>
+              <li>what is it to me, replacing image-based tools with markup tools</li>
               <li>can be daunting</li>              
-              <li>common pushback:</li>                            
+            </ul>
+          </aside>
+        </section>
+        
+		<section>
+          <h2>Objections</h2>
+          <ul>
+            <li>takes too long</li>
+            <li></li>
+            <li>have to do graphics in one program and layout in another</li>
+            <li>stifles creativity, pushes people toward minimal/flat design</li>
+          </ul>
+          <aside class="notes">
+            <ul>
               <li>"aleady swamped" "take longer" "not my job" "stifle creativity" "look certain way, flat"</li>
               <li>not for everyone, but worked for me, share</li>
               <li>how did I get here?</li>
             </ul>
           </aside>
-        </section>
+        </section>        
 
         <section>
           <img src="img/fireworks3.png">
-          <h2>O.G.</h2>
           <aside class="notes">
             <ul>
-              <li>using FW since 1998</li>
-              <li>sadly discontinued</li>
-              <li>worked well, knew it</li>
-              <li>learned features, run trainings, debated vs PS</li>
+              <li>FW partisan since 1998</li>
+              <li>still use even after discontinuance</li>
+              <li>know all the keyboard shortcuts, pages versus states and all of that</li>
+              <li>ran trainings, debated vs PS</li>
               <li>traditional waterfall</li>              
               <li>wrote requirement docs and static mockups</li>
               <li>not worth writing code</li>              
               <li>read, experimented, understood, far from expect</li>
               <li>could do anything in FW, but not connected to feasibility/desireability</li>
-              <li>interviwed at Bizo</li>
             </ul>
           </aside>
         </section>
+
+        <section>
+          <h2>Waterfall Process</h2>
+          <aside class="notes">
+            <ul>
+              <li>Separated from developers by department</li>
+              <li>Wrote long requirements documents defining every possible spec</li>
+              <li>developers coded it ad six months later we got to test it</li>
+              <li>we'd find problems then argue over whether they were bugs or change requests</li>
+              <li>QA would say we've already begun regression testing, we can't not launch it</li>
+              <li>very political, inflexible, and quality was not what it should have been</li>
+            </ul>
+          </aside>
+        </section>        
         
         <section>
           <img src="img/bizo.jpg">
@@ -114,124 +136,248 @@
 
         <section>
 		  <img src="img/kanban.png">
-          <h2>team productivity</h2>
+          <h2>kanban process</h2>
           <aside class="notes">
             <ul>
               <li>kanban is type of agile, kanban queue sketch, my role in it</li>
               <li>once set up, realized team very fast</li>
               <li>especially similar designs, iterations</li>
-              <li>can keep whole team busy</li>
-              <li>UX not bottleneck, Dev is</li>
-              <li>Biz sense, more sense for me do take on more</li>
-              <li>Devs say it reduces their dead time</li>
-              <li>transiton: benefit 2 - quality</li>
             </ul>
           </aside>
         </section>
-              
+        
         <section>
-          <a href="http://localhost:4000/pages/prototypes/campaign-performance.html" target="_blank">
-            <img src="img/prototype.png"></a>
-          <h2>prototypes > mockups</h2>              
+		  <h2>example of a kanban task</h2>
           <aside class="notes">
             <ul>
-              <li>can specify more in prototype, requirements in the code</li>
-              <li>adapting to screen size</li>
-              <li>text: wrapping, justification, really long</li>
-              <li>interactive controls</li>
-              <li>tab order in a form</li>
-              <li>example report</li>
-              <li>easier to write code than create layers, slice behaviors</li>            
-              <li>less chance of misinterpretation</li>
-              <li>features defined naturally, whether you want to or not</li>
-              <li>forces you to think, might gloss over in static image</li>              
-              <li>higher quality</li>  
-              <li>transition: benefit 3 - consistency</li>
+              <li>we use Asana to track them</li>
+              <li>Backlog, Dev Ready, In Progress, Done, Testing, Production</li>
             </ul>
           </aside>
-        </section>
+        </section>        
+        
+        <section>
+		  <h2>sketching</h2>
+          <aside class="notes">
+            <ul>
+              <li>mainly exploring layouts</li>
+              <li>some visual ideas but not usually detailed</li>
+              <li>do this until I feel comfortable with a concept</li>
+            </ul>
+          </aside>
+        </section>                
 
         <section>
-		  <img src="img/big-mac.jpeg">
-          <h2>consistency</h2>
+		  <h2>go right into Bootstrap</h2>
           <aside class="notes">
             <ul>
-              <li>beef patties</li>
-              <li>have made style guides, pattern libraries, symbol libraries, themes</li>
-              <li>they sucks. ton of time, getting people to read it, follow it</li>
-              <li>extra step for them, have to check another thing</li>
-              <li>feel outdated after a month</li>              
-              <li>easy to overlook or ignore if no one's checking</li>
-              <li>stylesheets always current, always relevant</li>
-              <li>standards built in, can't ignore them</li>
-              <li>without going out of your way, then it's obvious</li>
-              <li>explain in code review</li>
-              <li>stylesheets continuous improvement</li>
-              <li>benefits over, transition to challenges</li>
+              <li>use local server version of bizstrap</li>
+              <li>free to iterate on my own as much as I want before committing</li>
             </ul>
           </aside>
-        </section>
+        </section>                                
+        
+        <section>
+		  <h2>quick and dirty at this point</h2>
+          <aside class="notes">
+            <ul>
+              <li>code it pretty fast</li>
+              <li>just trying to get my concept up, so use inline styles for now</li>
+              <li>no point in editing my stylesheet until I'm confident of what final will be like</li>
+            </ul>
+          </aside>
+        </section>                        
+        
+        <section>
+		  <h2>publish to release candidate</h2>
+          <aside class="notes">
+            <ul>
+              <li>once I commit I can publish to our release candidate site, send link to others</li>
+              <li>nice to review this way because I do my best proofreading after I click send</li>
+              <li>so I can quickly update little mistakes and no one sees them</li>
+            </ul>
+          </aside>
+        </section>                                        
+        
+        <section>
+		  <h2>code reviews on Jira</h2>
+          <aside class="notes">
+            <ul>
+              <li>do another commit to remove inline styles and clean up css</li>
+              <li>keeps them informed on what we're worknig on</li>
+              <li>helps me become a better coder, if I'm doing something in a sloppy way</li>
+              <li>example code review on table pagination-right</li>
+            </ul>
+          </aside>
+        </section>                                                
+        
+        <section>
+		  <h2>Iterate based on feedback</h2>
+          <aside class="notes">
+            <ul>
+              <li>customers, developers, PMs all give feedback together</li>
+              <li>nice to uncover all constraints as early as possible without sequencing them</li>
+            </ul>
+          </aside>
+        </section>                                                     
+        
+        <section>
+		  <h2>scalable</h2>
+          <aside class="notes">
+            <ul>
+              <li>change my colors, all mockups get new colors</li>
+            </ul>
+          </aside>
+        </section>                                                             
+        
+        <section>
+		  <h2>scalable</h2>
+          <aside class="notes">
+            <ul>
+              <li>metrics example, pain to change all of these manually</li>
+            </ul>
+          </aside>
+        </section>                                                             
+        
+        <section>
+		  <h2>speed</h2>
+          <aside class="notes">
+            <ul>
+              <li>keyboard faster than mouse, don't have to manually space everything</li>
+            </ul>
+          </aside>
+        </section>                                                     
+        
+        <section>
+		  <h2>easy to share</h2>
+          <aside class="notes">
+            <ul>
+              <li>can update mockups you've already shared without sending files everywhere</li>
+            </ul>
+          </aside>
+        </section>                                                             
+        
+        <section>
+		  <h2>consistency</h2>
+          <aside class="notes">
+            <ul>
+              <li>like a pattern library but without all the upkeep</li>
+              <li>best documentation is documentation in practice</li>
+              <li>have to go out of your way to not follow it</li>
+              <li>doing something different will be obvious in code review, so you'll need to justify it</li>
+            </ul>
+          </aside>
+        </section>                                                                     
+        
+        <section>
+		  <h2>frees developers to develop</h2>
+          <aside class="notes">
+            <ul>
+              <li>we hire generalist engineers, they like to solve hard problems</li>
+              <li>most of them don't want to write front-end code (this 1st way you get them on board)</li>
+              <li>better way to communicate with them, they don't want to sit down and read long requirements docs anymore than I want to write them</li>
+              <li>they'd much rather review code and get the idea</li>
+            </ul>
+          </aside>
+        </section>                                                                             
 
         <section>
-          <img src="img/frustration.jpg">
-          <h2>don't beat yourself up</h2>
+		  <h2>better design quality</h2>
           <aside class="notes">
             <ul>
-              <li>story about image</li>
-              <li>slower at first</li>
-              <li>temptation to go back to old tools, fireworks template</li>
-              <li>question yourself</li>
-              <li>you'll adapt</li>
-              <li>get help online, from your devs</li>
-              <li>a lot more resources than for PS</li>
-              <li>frameworks have good documentation as well</li>
-              <li>once you get it, ton of fun, time flies</li>
-              <li>playing with legos</li>
-              <li>having a great time, still use FW?</li>
+              <li>much less disconnect between what I design and what gets built</li>
+              <li>they don't always see how things are supposed to be aligned</li>
+              <li>typography can be unpredictable when going from mockup to browser</li>
             </ul>
           </aside>
-        </section>
+        </section>                                                       
 
         <section>
-          <img src="img/goodbye.png">
-          <h2>Is there still a place for these tools?</h2>
+		  <h2>easy prototyping</h2>
           <aside class="notes">
             <ul>
-              <li>keyboard shortcuts memorized</li>
-              <li>creating graphics, photos</li>
-              <li>earlier in process, though sometimes paper</li>              
-              <li>not too detailed, don't duplicate</li>
-              <li>ok, you're sold</li>
-              <li>what do you need?</li>
+              <li>very simple to string HTML mockups together to make a clickable prototype</li>
+              <li>easy to prepare usability tests</li>
+              <li>can keep a fully clickable prototype of future features, how they all hang together</li>
             </ul>
           </aside>
-        </section>
+        </section>                                                               
+        
+        <section>
+		  <h2>includes all the specs</h2>
+          <aside class="notes">
+            <ul>
+              <li>can specify how it scales across browser sizes, handle dynamic content, hover states, animated transitions, 
+              tab order, content in dropdowns, field placeholders</li>
+            </ul>
+          </aside>
+        </section>                                                                       
 
         <section>
-          <h2>getting started</h2>
-          <ul>
-            <li>Partner with your developers</li>
-            <li>Choose a framework</li>            
-            <li>Fork it on GitHub</li>
-			<li>Set up a hosted version for your whole team</li>
-            <li>Install a local version on your machine</li>            
-            <li>Start or join a code review process</li>            
-            <li>Merge in new versions of your framework over time</li>            
-          </ul>
+		  <h2>charts</h2>
           <aside class="notes">
             <ul>
-              <li>need partnership, in it together, roadblocks only they solve</li>
-              <li>choose framework like bootstrap/foundation</li>
-              <li>fork on github, explain</li>
-              <li>version on a hosted site, reference, prototypes</li>
-              <li>local version on your machine</li>
-              <li>local server and builder on your machine like thin, jekyll & rake</li>
-              <li>code reviews, explain</li>
-              <li>process for merging</li>
-              <li>hope I've inspired you</li>
+              <li>a big thing for me, how do they look with different data?</li>
+              <li>can see how changing inputs or options affects how it will look</li>
             </ul>
           </aside>
-        </section>
+        </section>                               
+        
+        <section>
+		  <h2>keeps design grounded in reality</h2>
+          <aside class="notes">
+            <ul>
+              <li>maybe show dribbble mockup</li>
+            </ul>
+          </aside>
+        </section>                                                  
+
+        <section>
+		  <h2>learning curve</h2>
+          <aside class="notes">
+            <ul>
+              <li>frustration at first</li>
+              <li>lots of trial and error figuring out why it's not working</li>
+              <li>can't do as much at first, much slower while ramping up</li>
+              <li>temptation to go back to old tools, don't give in</li>
+              <li>well worth the investment in yourself</li>
+            </ul>
+          </aside>
+        </section>                                          
+
+        <section>
+		  <h2>mastering it feels great</h2>
+          <aside class="notes">
+            <ul>
+              <li>like playing with legos</li>
+            </ul>
+          </aside>
+        </section>                                                  
+
+        <section>
+		  <h2>how to do it</h2>
+          <aside class="notes">
+            <ul>
+              <li>parter with Devs, get their buy in</li>
+              <li>choose a framework</li>
+              <li>set up a code repository to store commits, do code reviews</li>
+              <li>set up a local server and version you can update on your machine</li>
+              <li>set up a release candidate to store your prototypes that you can link to and update</li>
+              <li>update and add new features over time</li>
+            </ul>
+          </aside>
+        </section>                                                                    
+        
+        <section>
+		  <h2>resources</h2>
+          <aside class="notes">
+            <ul>
+              <li>stack exchange</li>
+              <li>W3C schools</li>
+              <li>all kinds of stuff</li>
+            </ul>
+          </aside>
+        </section>                          
         
         <section>
           <h3>Final Thought</h3>
