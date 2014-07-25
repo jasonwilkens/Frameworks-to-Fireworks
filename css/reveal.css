@@ -327,6 +327,15 @@ body {
 	vertical-align: top;
 }
 
+/* Font Awesome Icons */
+
+.reveal i.fa {
+  font-family:FontAwesome;
+}
+
+.reveal i.yellow {
+  color:#FFFF73;
+}
 
 /*********************************************
  * CONTROLS
