@@ -331,10 +331,16 @@ body {
 
 .reveal i.fa {
   font-family:FontAwesome;
+  font-style:normal;
 }
 
 .reveal i.yellow {
   color:#FFFF73;
+}
+
+.reveal hr {
+  margin-top:30px;
+  margin-bottom: 20px;
 }
 
 /*********************************************
