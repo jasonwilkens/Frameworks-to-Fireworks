@@ -39,20 +39,17 @@
           <aside class="notes">
             <ul>
               <li>Thank you for having me</li>              
-              <li>Thanks to Dave and Atlassian</li>
               <li>this talk is about a design process for designing in the browser</li>
               <li>not the only process, but has been a success for us</li>
             </ul>
           </aside>
         </section>
 
-		<section>
+				<section>
           <h1>
             <i class="fa fa-pencil"></i>
             <i class="fa fa-caret-right"></i>
             <i class="fa fa-file-image-o"></i>
-            +
-            <i class="fa fa-file-word-o"></i>
             <i class="fa fa-caret-right"></i>
             <i class="fa fa-code"></i>
           </h1>
@@ -71,8 +68,32 @@
             </ul>
           </aside>
         </section>
+				
+				<section>
+					<h1>
+						<i class="fa fa-file-image-o"></i> + 
+						<i class="fa fa-file-image-o"></i> + 
+						<i class="fa fa-file-image-o"></i> + 
+						<i class="fa fa-file-image-o"></i> + 
+						<i class="fa fa-file-image-o"></i>
+					</h1>
+					<hr />
+					<h1>
+						<i class="fa fa-file-code-o yellow"></i>
+					</h1>
+				</section>
+				
+				<section>
+					<h1>
+						<i class="fa fa-crop"></i>
+					</h1>
+					<hr />
+					<h1>
+						<i class="fa fa-keyboard-o yellow"></i>
+					</h1>
+				</section>								
         
-		<section>
+				<section>
           <h1><i class="fa fa-comments-o"></i></h1>
           <h2>objections</h2>
           <ul>
@@ -154,7 +175,7 @@
         </section>        
         
         <section>
-		  <img src="img/kanban.jpg">
+		  		<img src="img/kanban.jpg">
           <h3>kanban process</h3>
           <aside class="notes">
             <ul>
@@ -171,7 +192,7 @@
         
         <section>
           <h1><i class="fa fa-list"></i></h1>
-		  <h2>kanban bins</h2>
+		  		<h2>kanban bins</h2>
           <ul>
             <li>Backlog</li>
             <li>Dev Ready [12]</li>
@@ -215,7 +236,7 @@
         
         <section>
           <img src="img/sketching.jpg">
-		  <h3>sketching</h3>
+		  		<h3>sketching</h3>
           <aside class="notes">
             <ul>
               <li>start by sketching</li>
@@ -228,8 +249,8 @@
         </section>                
 
         <section>
-          <img src="img/prototype-config-page.png">
-		  <h3>from sketch, start prototyping</h3>
+          <img src="img/config-page.png">
+		  		<h3>from sketch, start prototyping</h3>
           <aside class="notes">
             <ul>
               <li>have our framework cloned to my laptop</li>
@@ -244,7 +265,7 @@
         
         <section>
           <h1><i class="fa fa-laptop"></i></h1>
-		  <h2>quick and dirty</h2>
+		  		<h2>quick and dirty</h2>
           <ul>
             <li>inline styles</li>
             <li>no classes added to framework yet</li>
@@ -262,8 +283,9 @@
           <h1>
             <i class="fa fa-laptop"></i>
             <i class="fa fa-long-arrow-right"></i>
-            <i class="fa fa-cubes"></i></h1>
-		  <h2>publish for review</h2>
+            <i class="fa fa-cubes"></i>
+					</h1>
+		  		<h2>publish for review</h2>
           <ul>
             <li>send link to stakeholders</li>
             <li>can keep updating during review</li>
@@ -281,7 +303,7 @@
         
         <section>
           <h1><i class="fa fa-bitbucket"></i></h1>
-		  <h3>code review</h3>
+		  		<h3>code review</h3>
           <img src="img/code-review.jpg">
           <aside class="notes">
             <ul>
@@ -297,7 +319,7 @@
         
         <section>
           <h1><i class="fa fa-refresh"></i></h1>
-		  <h2>iterate</h2>
+		  		<h2>iterate</h2>
           <ul>
             <li>concurrent feedback</li>
             <li>as design finalizes, add styles to framework</li>
@@ -347,7 +369,7 @@
         
         <section>
           <h1><i class="fa fa-trophy"></i></h1>
-		  <h2>design quality</h2>
+		  		<h2>design quality</h2>
           <ul>
             <li>fewer surprises at release</li>
             <li>typographic rendering</li>
@@ -364,7 +386,7 @@
 
         <section>
           <img src="img/navigation.png">
-		  <h3>design quality</h3>
+		  		<h3>design quality</h3>
           <aside class="notes">
             <ul>
               <li>can specify more in code, easier</li>
@@ -378,7 +400,7 @@
 
         <section>
           <img src="img/dashboard.png">
-		  <h3>prototyping</h3>
+		  		<h3>prototyping</h3>
           <aside class="notes">
             <ul>
               <li>can build complete prototype</li>
@@ -405,7 +427,43 @@
         </section>
         
         <section>
-          <img src="img/d3-chart.png">
+          <pre>
+					  <code class="html">
+&lt;div style="height:400px;" id="chart"&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+  var data1 = [
+    ["Sep 1, 2014", 88000],
+    ["Sep 2, 2014", 124000],
+    ["Sep 3, 2014", 392000]
+    ].map(function (d) { 
+      return [
+        new Date(d[0]), 
+        d[1]
+      ] 
+    }) 
+
+    chart = new LineChart("#chart", {
+      xScale: d3.time.scale(),
+      area: true,
+      dots: true,
+      grid: true,
+      tooltips: true,
+      margin: {top:50, right: 65, bottom: 50, left: 65}
+    })      
+
+    chart.xAxis
+    .ticks(d3.time.days)
+    .tickFormat(d3.time.format("%d"))        
+
+  chart.draw([ 
+    { label: "bizolightblue", data: data1 }, 
+  ])        
+
+&lt;/script&gt;
+					  </code>
+					</pre>
           <h3>chart markup</h3>
           <aside class="notes">
             <ul>
@@ -417,7 +475,30 @@
         </section>
         
         <section>
-          <img src="img/chart-style.png">
+          <pre>
+						<code class="css">
+.dashed.line {
+  stroke-dasharray: 10,10;
+}
+
+.bizolightblue.line {
+  stroke: @bizolightblue;
+  fill: none;
+  stroke-width: 3px;
+}
+
+.bizolightblue.dot {
+  fill: @bizolightblue;
+  stroke: @white;
+  stroke-width: 2px;
+}
+
+.bizolightblue.area {
+  fill: @bizolightblue; 
+  fill-opacity: .1;
+}					
+						</code>
+					</pre>
           <h3>chart styles</h3>
           <aside class="notes">
             <ul>
@@ -429,7 +510,7 @@
         
         <section>
           <img src="img/dribbble-chart.jpg">
-		  <h3>keep design grounded in reality</h3>
+		  		<h3>keep design grounded in reality</h3>
           <aside class="notes">
             <ul>
               <li>here's a very different looking chart from dribbble</li>
@@ -446,7 +527,7 @@
                 
         <section>
           <img src="img/bizo-colors.jpg">
-		  <h3>scalable</h3>
+		  		<h3>scalable</h3>
           <aside class="notes">
             <ul>
               <li>all the benefits of css scalability</li>
@@ -458,7 +539,7 @@
         
         <section>
           <img src="img/biz-index.png">
-		  <h3>scalable</h3>
+		  		<h3>scalable</h3>
           <aside class="notes">
             <ul>
               <li>imagine changing all these progress bars manually</li>
@@ -470,7 +551,7 @@
         
         <section>
           <h1><i class="fa fa-copy"></i></h1>
-		  <h2>consistency</h2>
+		  		<h2>consistency</h2>
           <ul>
             <li>documentation in practice</li>
             <li>easy to follow standards</li>
@@ -489,7 +570,7 @@
         
         <section>
           <h1><i class="fa fa-rocket"></i></h1>
-		  <h2>engineering</h2>
+		  		<h2>engineering</h2>
           <ul>
             <li>let developers develop</li>
             <li>better collaboration</li>
@@ -511,7 +592,7 @@
         
         <section>
           <h1><i class="fa fa-keyboard-o"></i></h1>
-		  <h2>comfort</h2>
+		  		<h2>comfort</h2>
           <ul>
             <li>typing faster than dragging</li>
           </ul>
@@ -527,7 +608,7 @@
         
         <section>
           <h1><i class="fa fa-share-alt"></i></h1>
-		  <h2>easy to share</h2>
+		  		<h2>easy to share</h2>
           <ul>
             <li>update on the fly</li>
             <li>maintain control</li>
@@ -586,7 +667,7 @@
 
         <section>
           <h1><i class="fa fa-road"></i></h1>
-		  <h2>how to start</h2>
+		  		<h2>how to start</h2>
           <ul>
             <li>partner with engineers</li>
             <li>choose a framework</li>
@@ -613,7 +694,7 @@
         
         <section>
           <h1><i class="fa fa-info-circle"></i></h1>
-		  <h2>resources</h2>
+		  		<h2>resources</h2>
           <ul>
             <li>stack overflow</li>
             <li>W3C schools</li>
@@ -641,7 +722,7 @@
           <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
         </section>
 
-		<section>
+				<section>
           <h1>Thank you</h1>
           <h3 class="inverse"><i class="fa fa-twitter"></i> @jasondwilkens</h3>
         </section>
